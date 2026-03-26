@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RustLMS</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" />
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="logo">
+        <span class="logo-text">RustLMS</span>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme">
+        <span id="themeIcon">Light</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Layout -->
+  <div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-inner">
+        <div id="tocContainer"></div>
+      </div>
+    </aside>
+
+    <!-- Overlay for mobile -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="content" id="contentArea">
+      <div id="chapterContent" class="chapter-content">
+
+        <!-- Landing page shown before any chapter is selected -->
+        <div class="landing">
+          <div class="landing-header">
+            <h1>Rust Programming</h1>
+            <p class="landing-subtitle">A comprehensive course from setup to performance engineering.</p>
+          </div>
+
+          <div class="landing-grid">
+            <div class="landing-card">
+              <div class="landing-card-num">15</div>
+              <div class="landing-card-label">Modules</div>
+            </div>
+            <div class="landing-card">
+              <div class="landing-card-num">100</div>
+              <div class="landing-card-label">Chapters</div>
+            </div>
+            <div class="landing-card">
+              <div class="landing-card-num">Advanced</div>
+              <div class="landing-card-label">Focus</div>
+            </div>
+          </div>
+
+          <div class="landing-start">
+            <p>Start with Module 1 to set up your environment and write your first programs.</p>
+            <button class="btn-start" id="startBtn">Start Module 1</button>
+          </div>
+
+          <div class="landing-resources">
+            <h2>Reference Resources</h2>
+            <ul>
+              <li><a href="https://google.github.io/comprehensive-rust/index.html" target="_blank">Comprehensive Rust (Google)</a></li>
+              <li><a href="https://doc.rust-lang.org/book/ch00-00-introduction.html" target="_blank">The Rust Book</a></li>
+              <li><a href="https://doc.rust-lang.org/rust-by-example/index.html" target="_blank">Rust by Example</a></li>
+              <li><a href="https://doc.rust-lang.org/nomicon/print.html" target="_blank">The Rustonomicon</a></li>
+              <li><a href="https://www.youtube.com/playlist?list=PLqbS7AVVErFiWDOAVrPt7aYmnuuOLYvOa" target="_blank">Rust Video Playlist</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Disable Prism auto-highlight so we can call it manually -->
+  <script>window.Prism = window.Prism || {}; Prism.manual = true;</script>
+
+  <!-- Prism core + languages -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-rust.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-toml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+
+  <!-- Core data (TOC + global object init) -->
+  <script src="data/toc.js"></script>
+
+  <!-- Module content & quizzes — add one pair per module as content is created -->
+  <script src="data/modules/module01/content.js"></script>
+  <script src="data/modules/module01/quizzes.js"></script>
+  <!-- <script src="data/modules/module02/content.js"></script> -->
+  <!-- <script src="data/modules/module02/quizzes.js"></script> -->
+
+  <!-- App -->
+  <script src="assets/js/quiz.js"></script>
+  <script src="assets/js/app.js"></script>
+
+</body>
+</html>
