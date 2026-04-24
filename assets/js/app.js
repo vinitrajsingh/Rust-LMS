@@ -65,7 +65,12 @@
     TOC.forEach(module => {
       const group = document.createElement('div');
       group.className = 'module-group' + (module.available ? '' : ' locked');
-      if (module.id === 1) group.classList.add('open'); /* Module 1 open by default */
+
+      /* Open the module that contains the active chapter, or default to module 1 */
+      const hasActiveChapter = module.chapters.some(ch => ch.id === currentChapter);
+      if (hasActiveChapter || (!currentChapter && module.id === 1)) {
+        group.classList.add('open');
+      }
 
       const subtitle = module.subtitle ? ` <span style="font-weight:400;opacity:0.7">${module.subtitle}</span>` : '';
       group.innerHTML = `
@@ -115,6 +120,7 @@
     if (!data) return;
 
     currentChapter = chId;
+    sessionStorage.setItem('rustlms-chapter', chId);
 
     /* Build prev/next */
     const idx  = CHAPTER_ORDER.indexOf(chId);
@@ -209,12 +215,5 @@
   if (lastChapter && CHAPTERS_CONTENT[lastChapter]) {
     loadChapter(lastChapter);
   }
-
-  /* Save chapter on load */
-  const _originalLoad = loadChapter;
-  window._loadChapter = function(id) {
-    sessionStorage.setItem('rustlms-chapter', id);
-    _originalLoad(id);
-  };
 
 })();

@@ -18,15 +18,15 @@ const TOC = [
   {
     id: 2,
     title: 'Core Language Basics',
-    available: false,
+    available: true,
     chapters: [
-      { id: 'ch05', num: 5,  title: 'Variables, Mutability & Shadowing',     available: false },
-      { id: 'ch06', num: 6,  title: 'Primitive Types',                       available: false },
-      { id: 'ch07', num: 7,  title: 'Expressions vs Statements',             available: false },
-      { id: 'ch08', num: 8,  title: 'Control Flow (if, loop, while, for)',   available: false },
-      { id: 'ch09', num: 9,  title: 'Functions',                             available: false },
-      { id: 'ch10', num: 10, title: 'Pattern Matching Basics',               available: false },
-      { id: 'ch11', num: 11, title: 'Basic Input/Output',                    available: false },
+      { id: 'ch05', num: 5,  title: 'Variables, Mutability & Shadowing',     available: true  },
+      { id: 'ch06', num: 6,  title: 'Primitive Types',                       available: true  },
+      { id: 'ch07', num: 7,  title: 'Expressions vs Statements',             available: true  },
+      { id: 'ch08', num: 8,  title: 'Control Flow (if, loop, while, for)',   available: true  },
+      { id: 'ch09', num: 9,  title: 'Functions',                             available: true  },
+      { id: 'ch10', num: 10, title: 'Pattern Matching Basics',               available: true  },
+      { id: 'ch11', num: 11, title: 'Basic Input/Output',                    available: true  },
     ]
   },
   {
