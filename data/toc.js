@@ -147,15 +147,15 @@ const TOC = [
   {
     id: 11,
     title: 'Concurrency & Multithreading',
-    available: false,
+    available: true,
     chapters: [
-      { id: 'ch70', num: 70, title: 'Threads',                               available: false },
-      { id: 'ch71', num: 71, title: 'Channels',                              available: false },
-      { id: 'ch72', num: 72, title: 'Mutex & RwLock',                        available: false },
-      { id: 'ch73', num: 73, title: 'Deadlocks',                             available: false },
-      { id: 'ch74', num: 74, title: 'Atomics',                               available: false },
-      { id: 'ch75', num: 75, title: 'Lock-Free Basics',                      available: false },
-      { id: 'ch76', num: 76, title: 'Fearless Concurrency',                  available: false },
+      { id: 'ch70', num: 70, title: 'Threads',                               available: true  },
+      { id: 'ch71', num: 71, title: 'Channels',                              available: true  },
+      { id: 'ch72', num: 72, title: 'Mutex & RwLock',                        available: true  },
+      { id: 'ch73', num: 73, title: 'Deadlocks',                             available: true  },
+      { id: 'ch74', num: 74, title: 'Atomics',                               available: true  },
+      { id: 'ch75', num: 75, title: 'Lock-Free Basics',                      available: true  },
+      { id: 'ch76', num: 76, title: 'Fearless Concurrency',                  available: true  },
     ]
   },
   {
