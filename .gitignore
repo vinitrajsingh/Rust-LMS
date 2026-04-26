@@ -1,3 +1,6 @@
-generate_report.py
+*.py
 *.md
+*.png
+*.pdf
+assets/diagrams/
 .claude/
