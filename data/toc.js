@@ -201,14 +201,14 @@ const TOC = [
   {
     id: 15,
     title: 'Performance Engineering',
-    available: false,
+    available: true,
     chapters: [
-      { id: 'ch95',  num: 95,  title: 'Zero-Cost Abstractions',              available: false },
-      { id: 'ch96',  num: 96,  title: 'Memory Layout',                       available: false },
-      { id: 'ch97',  num: 97,  title: 'Cache Locality',                      available: false },
-      { id: 'ch98',  num: 98,  title: 'Benchmarking',                        available: false },
-      { id: 'ch99',  num: 99,  title: 'Profiling (Flamegraph)',               available: false },
-      { id: 'ch100', num: 100, title: 'Optimization Strategies',             available: false },
+      { id: 'ch95',  num: 95,  title: 'Zero-Cost Abstractions',              available: true  },
+      { id: 'ch96',  num: 96,  title: 'Memory Layout',                       available: true  },
+      { id: 'ch97',  num: 97,  title: 'Cache Locality',                      available: true  },
+      { id: 'ch98',  num: 98,  title: 'Benchmarking',                        available: true  },
+      { id: 'ch99',  num: 99,  title: 'Profiling (Flamegraph)',              available: true  },
+      { id: 'ch100', num: 100, title: 'Optimization Strategies',             available: true  },
     ]
   },
 ];
